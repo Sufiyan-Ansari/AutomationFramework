@@ -15,11 +15,13 @@ namespace AutomationFramework.Implementation
             {
                 try
                 {
-                    string url = "https://dubai.dubizzle.com";
+                  //  string url = "https://dubai.dubizzle.com";
+
+                    string url = "https://dubai.dubizzle.com/en/property-for-rent/residential/apartmentflat/";
+
                     Initialize(url);
 
-                    //Using quit function temperary
-                    driver.Quit();
+                    
                 }
                 catch(Exception ex)
                 {
