@@ -169,6 +169,19 @@ testRunner.And("I wait for \"5000\"", ((string)(null)), ((TechTalk.SpecFlow.Tabl
 testRunner.Then("I want to validate filters of price range on \"//div[@data-testid=\'listing-price\']" +
                         "//span[2]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
+#line 29
+testRunner.And("I Scroll Down", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 30
+testRunner.And("I am clicking on \"//div//a[@data-test=\'pagination-page-2\']\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 31
+testRunner.And("I wait for \"5000\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 33
+testRunner.Then("I want to validate filters of price range on \"//div[@data-testid=\'listing-price\']" +
+                        "//span[2]\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

@@ -23,6 +23,7 @@ namespace AutomationFramework.Steps
             step.HoverToElement(locator);
         }
         [When(@"I wait for ""(.*)""")]
+        [Then(@"I wait for ""(.*)""")]
 
         [Given(@"I wait for ""(.*)""")]
         public void GivenIWaitFor(int time)
@@ -32,6 +33,8 @@ namespace AutomationFramework.Steps
         }
         [Given(@"I am clicking on ""(.*)""")]
         [When(@"I am clicking on ""(.*)""")]
+        [Then(@"I am clicking on ""(.*)""")]
+
         public void GivenIAmClickingOn(string locator)
         {
             SeleniumSteps step = new SeleniumSteps();
@@ -50,6 +53,17 @@ namespace AutomationFramework.Steps
             SeleniumSteps step = new SeleniumSteps();
             step.PriceVerification(locator);
         }
+        
+        [Then(@"I Scroll Down")]
+        public void ThenIScrollDown()
+        {
+
+
+            SeleniumSteps step = new SeleniumSteps();
+            step.scrollDown();
+        }
+
+
 
 
 

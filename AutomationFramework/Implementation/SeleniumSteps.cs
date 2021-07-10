@@ -1,8 +1,10 @@
 ﻿using AutomationFramework.Common;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading;
 
@@ -56,16 +58,34 @@ namespace AutomationFramework.Implementation
        //     temp = element.Text;
 
             IList<IWebElement> ele = driver.FindElements(By.XPath(locator));
-            String[] alltext = new String[ele.Count];
+            string[] alltext = new string[ele.Count];
             int i = 0;
             foreach(IWebElement element in ele)
             {
                 alltext[i++] = element.Text;
+                string test = element.Text;
+                string test2 = test.Replace(",", "");
+                int testNumber = Convert.ToInt32(test2);
+                try
+                {
+                    if (testNumber > 80000 || testNumber < 60000)
+                    {
+                        Assert.Fail("Price filter is not working");
+                    }
+                }
+                catch(Exception ex)
+                {
+                    Assert.Fail("Something went wrong");
+                }
+                
             }
+        }
 
-            int[] NewArray = new int[ele.Count];
-
-            
+        public void scrollDown()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            //js.ExecuteScript("window.scrollTo(0,350)");
+            js.ExecuteScript("window.scrollBy(0,9500)");
 
         }
     }
