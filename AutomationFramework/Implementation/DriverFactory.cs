@@ -15,8 +15,11 @@ namespace AutomationFramework.Implementation
             {
                 try
                 {
-                    string url = "";
-                    
+                    string url = "https://dubai.dubizzle.com";
+                    Initialize(url);
+
+                    //Using quit function temperary
+                    driver.Quit();
                 }
                 catch(Exception ex)
                 {
