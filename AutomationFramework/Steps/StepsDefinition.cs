@@ -16,6 +16,11 @@ namespace AutomationFramework.Steps
             SeleniumSteps step = new SeleniumSteps();
             step.LaunchApplication();
         }
+        [Given(@"user is navigation on ""(.*)""")]
+        public void GivenUserIsNavigationOn(string locator)
+        {
+            ScenarioContext.Current.Pending();
+        }
 
 
 
