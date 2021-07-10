@@ -51,9 +51,9 @@ namespace AutomationFramework.Implementation
 
         public void PriceVerification(string locator)
         {
-            string temp = "";
+            int temp = 0;
             element = driver.FindElement(By.XPath(locator));
-            temp = element.Text;
+       //     temp = element.Text;
 
             IList<IWebElement> ele = driver.FindElements(By.XPath(locator));
             String[] alltext = new String[ele.Count];
@@ -62,6 +62,10 @@ namespace AutomationFramework.Implementation
             {
                 alltext[i++] = element.Text;
             }
+
+            int[] NewArray = new int[ele.Count];
+
+            
 
         }
     }
