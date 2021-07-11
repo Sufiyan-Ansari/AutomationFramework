@@ -53,10 +53,8 @@ namespace AutomationFramework.Implementation
 
         public void PriceVerification(string locator)
         {
-            int temp = 0;
             element = driver.FindElement(By.XPath(locator));
-       //     temp = element.Text;
-
+       
             IList<IWebElement> ele = driver.FindElements(By.XPath(locator));
             string[] alltext = new string[ele.Count];
             int i = 0;
@@ -84,7 +82,6 @@ namespace AutomationFramework.Implementation
         public void scrollDown()
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-            //js.ExecuteScript("window.scrollTo(0,350)");
             js.ExecuteScript("window.scrollBy(0,9500)");
 
         }

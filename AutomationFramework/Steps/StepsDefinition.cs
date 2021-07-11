@@ -1,4 +1,5 @@
 ﻿using AutomationFramework.Implementation;
+using AutomationFramework.POM;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -37,6 +38,7 @@ namespace AutomationFramework.Steps
 
         public void GivenIAmClickingOn(string locator)
         {
+            
             SeleniumSteps step = new SeleniumSteps();
             step.Click(locator);
         }
